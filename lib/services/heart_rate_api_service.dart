@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import '../models/heart_rate_sample.dart';
 
 class HeartRateApiService {
-  static const String apiUrl = 'http://172.20.10.13:5000/api/datos';
+  static const String apiUrl = 'http://172.17.54.160:5000/api/datos';
 
   static Future<List<HeartRateSample>> fetchHeartRates() async {
     final response = await http.get(Uri.parse(apiUrl));
