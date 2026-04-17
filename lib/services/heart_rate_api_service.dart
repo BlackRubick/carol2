@@ -14,4 +14,4 @@ class HeartRateApiService {
       throw Exception('Error al obtener datos del API');
     }
   }
-}apurate son humi
+}
