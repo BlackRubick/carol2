@@ -11,14 +11,14 @@ jobs:
 
     steps:
       - name: Clonar repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Instalar Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0'
+          flutter-version: '3.41.7'  # 🔥 IMPORTANTE
 
-      - name: Ver versión Flutter (debug)
+      - name: Ver versión
         run: flutter --version
 
       - name: Instalar dependencias
@@ -27,10 +27,7 @@ jobs:
       - name: Build APK
         run: flutter build apk --release
 
-      - name: Verificar APK generado (debug)
-        run: ls build/app/outputs/flutter-apk/
-
-      - name: Subir APK como artifact
+      - name: Subir APK
         uses: actions/upload-artifact@v4
         with:
           name: app-release
