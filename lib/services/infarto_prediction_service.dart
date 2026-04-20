@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class InfartoPredictionService {
-  static const String apiUrl = 'http://172.17.54.160:5000/api/prediccion_infarto';
+  static const String apiUrl = 'http://192.168.0.100:5000/api/prediccion_infarto';
 
   static Future<bool> fetchInfartoRisk() async {
     final response = await http.get(Uri.parse(apiUrl));
